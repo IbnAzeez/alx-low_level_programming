@@ -1,4 +1,4 @@
-#include <stdio.h>
+i#include <stdio.h>
 #include <ctype.h>
 /**
  * main - assigns a random number to int n everytime
@@ -17,7 +17,6 @@ int main(void)
 	{
 		putchar(toupper(y));
 	}
-	putchar('\n');
 	putchar('\n');
 	return (0);
 }
