@@ -10,16 +10,15 @@ int main(void)
 
 	for (l = 48; l < 58; l++)
 	{
-		for (h = 48; n < 58; h++)
+		for (h = 48; h < 58; h++)
 		{
-			if (l != h)
+			if (l != h && l < h)
 			{
 				putchar(l);
-				
-			}
-			putchar(h);
+				putchar(h);
+				putchar(' ');
+			} 
 		}
 	}
-	putchar('\n');
 	return (0);
 }
