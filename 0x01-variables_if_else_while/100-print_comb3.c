@@ -16,10 +16,14 @@ int main(void)
 			{
 				putchar(l);
 				putchar(h);
-				putchar(',');
-				putchar(' ');
+				if (l != 56 || h != 57)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }
