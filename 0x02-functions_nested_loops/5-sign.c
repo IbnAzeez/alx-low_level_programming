@@ -7,7 +7,7 @@
  * Returns 0 and prints 0 if n is zero
  * Returns -1 and prints - if n is less than zero
  */
-int print_sign(int c)
+int print_sign(int n)
 {
 	if (n > 0)
 	{
@@ -19,7 +19,7 @@ int print_sign(int c)
 		if (n == 0)
 		{
 			_putchar(48);
-			rturn (0);
+			return (0);
 		}
 		else
 		{
