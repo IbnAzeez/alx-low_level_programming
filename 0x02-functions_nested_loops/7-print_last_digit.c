@@ -9,9 +9,11 @@
 
 int print_last_digit(int n)
 {
+	int a;
+
 	if (n > 10)
 	{
-		return (n % 10);
+		a = n % 10;
 	}
 	else
 	{
@@ -20,4 +22,5 @@ int print_last_digit(int n)
 			return (n);
 		}
 	}
+	return (a);
 }
