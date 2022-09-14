@@ -17,10 +17,11 @@ int print_last_digit(int n)
 	}
 	else
 	{
-		if (n < 10 && n > 0)
+		if (n < 10 && n >= 0)
 		{
 			return (n);
 		}
 	}
+	_putchar(a + '0');
 	return (a);
 }
