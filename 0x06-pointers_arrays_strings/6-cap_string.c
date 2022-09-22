@@ -21,7 +21,7 @@ char *cap_string(char *s)
 			s[i] -= 32;
 		while (j < 13)
 		{
-			if (s[i] == spe[j]);
+			if (s[i] == spe[j])
 			{
 				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
 				{
