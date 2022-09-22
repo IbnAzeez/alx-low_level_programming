@@ -11,6 +11,7 @@ char *leet(char *s)
 
 	char *a = "aAeEoOtTlL";
 	char *b = "4433007711";
+
 	i = 0;
 
 	while (s[i] != '\0')
@@ -22,6 +23,7 @@ char *leet(char *s)
 				s[i] = b[j];
 			}
 		}
+
 		i++;
 	}
 	return (s);
