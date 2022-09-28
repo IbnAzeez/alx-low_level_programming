@@ -24,5 +24,5 @@ int _main(int n, int i)
 		return (-1);
 	if (i * i == n)
 		return (i);
-	return (main(n, i + 1));
+	return (_main(n, i + 1));
 }
