@@ -9,16 +9,16 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (main(n, 0));
+	return (_main(n, 0));
 }
 
 /**
- * main - recurses
+ * _main - recurses
  * @n: number to calculate the sqaure root of
  * @i: iterator
  * Return: the resulting square root
  */
-int main(int n, int i)
+int _main(int n, int i)
 {
 	if (i * i > n)
 		return (-1);
