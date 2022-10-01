@@ -1,8 +1,10 @@
+#include "main.h"
 #include <stdio.h>
 #include <unistd.h>
 
 int main (void)
 {
+	_putchar('\n');
 }
 
 int _putchar(char c)
