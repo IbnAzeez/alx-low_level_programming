@@ -18,6 +18,7 @@ int _atoi(char *s)
 
 	for (length = 0; s[length] != '\0'; length++)
 	{
+
 	}
 
 	while (i < length && k == 0)
@@ -38,7 +39,7 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	
+
 	if (k == 0)
 		return (0);
 
@@ -62,7 +63,7 @@ int main(int argc, char *argv[])
 
 	while (x < argc)
 	{
-		while (argv[x][y] != '\0')		
+		while (argv[x][y] != '\0')
 		{
 			if (argv[x][y] > '9' || argv[x][y] < '0')
 			{
@@ -79,7 +80,7 @@ int main(int argc, char *argv[])
 		number = _atoi(argv[z]);
 		if (number >= 0)
 		{
-			sum += number;	
+			sum += number;
 		}
 		z++;
 	}
