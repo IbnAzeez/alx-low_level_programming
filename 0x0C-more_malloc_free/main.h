@@ -1,5 +1,5 @@
-fndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef FILE_H
+#define FILE_H
 
 int _putchar(char c);
 void *malloc_checked(unsigned int b);
