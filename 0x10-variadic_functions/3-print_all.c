@@ -6,7 +6,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i;
+	int i = 0;
 	char *str, *sep = "";
 	va_list list;
 
@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 
 	if (format)
 	{
-		for (i = 0; format[i]; i++)
+		while (format[i])
 		{
 			switch (format[i])
 			{
@@ -40,6 +40,7 @@ void print_all(const char * const format, ...)
 			}
 
 			sep = ", ";
+			i++;
 		}
 	}
 
