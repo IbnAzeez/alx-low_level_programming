@@ -12,7 +12,7 @@ int sum_them_all(const unsigned int n, ...)
 	va_list list;
 
 	va_start(list, n);
-	
+
 	i = 0;
 
 	while (i < n)
@@ -22,6 +22,6 @@ int sum_them_all(const unsigned int n, ...)
 	}
 
 	va_end(list);
-	
+
 	return (sum);
 }
