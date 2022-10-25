@@ -21,3 +21,7 @@
 10-delete_nodeint.c deletes the node at index index of a listint_t linked list.
 
 100-reverse_listint.c reverses a listint_t linked list.
+
+101-print_listint_safe.c prints a listint_t linked list.
+
+102-free_listint_safe.c frees a listint_t list.
