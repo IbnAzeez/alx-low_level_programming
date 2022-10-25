@@ -7,3 +7,5 @@
 3-add_nodeint_end.c adds a new node at the end of a listint_t list.
 
 4-free_listint.c frees a listint_t list.
+
+5-free_listint2.c frees a listint_t list.
