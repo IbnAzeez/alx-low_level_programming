@@ -28,8 +28,8 @@ size_t print_listint_safe(const listint_t *head)
 		}
 	}
 
-	return (i);
-
 	if(!i)
 		exit(98);
+
+	return (i);
 }
