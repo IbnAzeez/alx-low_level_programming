@@ -10,7 +10,7 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t i;
-       	long int d;
+	long int d;
 
 	i = 0;
 
@@ -28,8 +28,8 @@ size_t print_listint_safe(const listint_t *head)
 		}
 	}
 
-	if(!d)
-		exit(98);
+/*	if(!d)
+		exit(98); */
 
 	return (i);
 }
