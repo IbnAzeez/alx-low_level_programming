@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -16,10 +17,13 @@ unsigned int binary_to_uint(const char *b)
        
 	x = 1;
 	y = 0;
-	l = _strlen(b);
-	i = l - 1;
+/*	l = _strlen(b);*/
+	i = 0;
 
-	while (i >= 0)
+	if (!b)
+		return (0);
+
+	while (b[i] != '\0')
 /*	for (c = len-1; c >= 0; c--)*/
 	{
 		if (b[i] != '0' && b[i] != '1')
