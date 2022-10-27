@@ -10,14 +10,12 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int l;
 	unsigned int x;
 	unsigned int y;
 	int i;
        
 	x = 1;
 	y = 0;
-/*	l = _strlen(b);*/
 	i = 0;
 
 	if (!b)
