@@ -20,7 +20,7 @@ int count(int n)
 
 	while (n > 0) {
 		i++;
-		n &= (n - 1)
+		n &= (n - 1);
 	}
 	return i;
 }
