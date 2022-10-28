@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdint.h>
 #include "main.h"
 
 /**
@@ -10,7 +12,8 @@ int get_endianness(void)
 	union {
 		uint32_t i;
 		char c[4];
-	} e = { 0x01000000 };
+	}
+	e = { 0x01000000 };
 
-	return e.c[0];
+	return e.c[0] == 1;
 }
