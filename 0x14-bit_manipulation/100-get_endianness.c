@@ -10,10 +10,12 @@
 int get_endianness(void)
 {
 	union {
-		uint32_t i;
-		char c[4];
-	}
-	e = { 0x01000000 };
+		int i;
+		char c[sizeof(int)];
+	} x;
+	x.i = 1;
+	if(x.c[0] == 1)
+		return (1);
 
-	return e.c[0] == 1;
+	return (0);
 }
