@@ -4,6 +4,7 @@
 
 /**
  * get_endianness - Checks the endianness.
+ * union - takes the memory of the largest data type
  * Return: If big-endian - 0, If little-endian - 1.
  */
 int get_endianness(void)
