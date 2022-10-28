@@ -9,5 +9,8 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	return (n | (1 << (index - 1)));
+/*	return (n | (1 << (index - 1)));*/
+	*n = *n | (1lu << index);
+
+	return (1);
 }
