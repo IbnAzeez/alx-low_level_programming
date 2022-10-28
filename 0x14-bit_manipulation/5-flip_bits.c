@@ -1,30 +1,29 @@
 #include "main.h"
 
 /**
- * flip_bits - Sets the value of a bit at a given index to 1.
- * @n: A pointer to the bit.
- * @m: The index to set the value at - indices start at 0
- * Return: number of bits you needed to flip to get from one number to another.
- */
-
-/**
- * count - count set bits
- * @n: Number
+ * count - counts set bits
+ * @x: Number
  * Return: Number of bits
  */
-int count(int n)
+int count(int x)
 {
 	int i;
 
 	i = 0;
 
-	while (n > 0)
-       	{
+	while (x > 0)
+	{
 		i++;
-		n &= (n - 1);
+		x &= (x - 1);
 	}
 	return (i);
 }
+/**
+ * flip_bits - Counts the number of bits needed to be flipped.
+ * @n: The number.
+ * @m: The number to flip n to.
+ * Return: The necessary number of bits to flip to get from n to m.
+ */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	return (count(n ^ m));
