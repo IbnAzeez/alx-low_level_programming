@@ -8,12 +8,13 @@
  */
 int get_endianness(void)
 {
-	union {
+	union
+	{
 		int i;
 		char c[sizeof(int)];
 	} x;
 	x.i = 1;
-	if(x.c[0] == 1)
+	if (x.c[0] == 1)
 		return (1);
 
 	return (0);
