@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,7 +21,8 @@ int main()
 	destFile    = fopen(destPath,   "w");
 	if (destFile == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO, 
+			"Error: Can't write to %s\n", file);
 		exit(99);
 	}
 	/* fopen() return NULL if unable to open file in given mode. */
