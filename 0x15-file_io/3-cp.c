@@ -1,26 +1,46 @@
-#include <iostream>
+#include <stdio.h>
 #include <stdlib.h>
-using namespace std;
-int main() {
-	char ch;// source_file[20], target_file[20];
-	FILE *source, *target;
-	char source_file[]="x1.txt";
-	char target_file[]="x2.txt";
-	source = fopen(source_file, "r");
-	if (source == NULL) {
-		printf("Press any key to exit...");
+
+int main()
+{
+	FILE *sourceFile;
+	FILE *destFile;
+	char sourcePath[100];
+	char destPath[100];
+
+	char ch;
+
+	/* Input path of files to copy */
+	printf("Enter source file path: ");
+	scanf("%s", sourcePath);
+	printf("Enter destination file path: ");
+	scanf("%s", destPath);
+
+	sourceFile  = fopen(sourcePath, "r");
+	destFile    = fopen(destPath,   "w");
+	/* fopen() return NULL if unable to open file in given mode. */
+	if (sourceFile == NULL || destFile == NULL)
+	{
+		/* Unable to open file hence exit */
+		printf("\nUnable to open file.\n");
+		printf("Please check if file exists and you have read/write privilege.\n");
 		exit(EXIT_FAILURE);
 	}
-	target = fopen(target_file, "w");
-	if (target == NULL) {
-		fclose(source);
-		printf("Press any key to exit...");
-		exit(EXIT_FAILURE);
+
+	ch = fgetc(sourceFile);
+	while (ch != EOF)
+	{
+		/* Write to destination file */
+		fputc(ch, destFile);
+		/* Read next character from source file */
+		ch = fgetc(sourceFile);
 	}
-	while ((ch = fgetc(source)) != EOF)
-		fputc(ch, target);
-	printf("File copied successfully.");
-	fclose(source);
-	fclose(target);
+
+	printf("\nFiles copied successfully.\n");
+
+	/* Finally close files to release resources */
+	fclose(sourceFile);
+	fclose(destFile);
+
 	return 0;
 }
