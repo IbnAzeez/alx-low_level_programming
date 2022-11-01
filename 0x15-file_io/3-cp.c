@@ -19,19 +19,13 @@ int main()
 
 	sourceFile  = fopen(sourcePath, "r");
 	destFile    = fopen(destPath,   "w");
-	if (destFile == NULL)
-	{
-		dprintf(STDERR_FILENO, 
-			"Error: Can't write to %s\n", destFle);
-		exit(99);
-	}
 	/* fopen() return NULL if unable to open file in given mode. */
 	if (sourceFile == NULL || destFile == NULL)
 	{
 		/* Unable to open file hence exit */
 		printf("\nUnable to open file.\n");
 		printf("Please check if file exists and you have read/write privilege.\n");
-		exit(EXIT_FAILURE);
+		exit(99);
 	}
 
 	ch = fgetc(sourceFile);
