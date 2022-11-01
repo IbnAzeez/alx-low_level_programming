@@ -22,7 +22,7 @@ int main()
 	if (destFile == NULL)
 	{
 		dprintf(STDERR_FILENO, 
-			"Error: Can't write to %s\n", file);
+			"Error: Can't write to %s\n", destFle);
 		exit(99);
 	}
 	/* fopen() return NULL if unable to open file in given mode. */
