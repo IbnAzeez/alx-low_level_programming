@@ -36,5 +36,5 @@ int main()
 	printf("\nContents copied to %s", filename);
 	fclose(fptr1);
 	fclose(fptr2);
-	return 0;
+	return (0);
 }
