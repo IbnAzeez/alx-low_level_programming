@@ -4,44 +4,37 @@
 
 int main()
 {
-	FILE *sourceFile;
-	FILE *destFile;
-	char sourcePath[100];
-	char destPath[100];
+	FILE *fptr1, *fptr2;
+	char filename[100], c;
 
-	char ch;
+	printf("Enter the filename to open for reading \n");
+	scanf("%s", filename);
 
-	/* Input path of files to copy */
-	printf("Enter source file path: ");
-	scanf("%s", sourcePath);
-	printf("Enter destination file path: ");
-	scanf("%s", destPath);
-
-	sourceFile  = fopen(sourcePath, "r");
-	destFile    = fopen(destPath,   "w");
-	/* fopen() return NULL if unable to open file in given mode. */
-	if (sourceFile == NULL || destFile == NULL)
+	// Open one file for reading
+	fptr1 = fopen(filename, "r");
+	if (fptr1 == NULL)
 	{
-		/* Unable to open file hence exit */
-		printf("\nUnable to open file.\n");
-		printf("Please check if file exists and you have read/write privilege.\n");
-		exit(99);
+		printf("Cannot open file %s \n", filename);
+	       	exit(0);
 	}
-
-	ch = fgetc(sourceFile);
-	while (ch != EOF)
+	printf("Enter the filename to open for writing \n");
+	scanf("%s", filename);
+	// Open another file for writing
+	fptr2 = fopen(filename, "w");
+	if (fptr2 == NULL)
 	{
-		/* Write to destination file */
-		fputc(ch, destFile);
-		/* Read next character from source file */
-		ch = fgetc(sourceFile);
+		printf("Cannot open file %s \n", filename);
+		exit(0);
+	}                                   
+	// Read contents from file
+	c = fgetc(fptr1);
+	while (c != EOF)
+	{
+		fputc(c, fptr2);
+		c = fgetc(fptr1);
 	}
-
-	printf("\nFiles copied successfully.\n");
-
-	/* Finally close files to release resources */
-	fclose(sourceFile);
-	fclose(destFile);
-
+	printf("\nContents copied to %s", filename);
+	fclose(fptr1);
+	fclose(fptr2);
 	return 0;
 }
