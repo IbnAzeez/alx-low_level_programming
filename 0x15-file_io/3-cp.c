@@ -25,7 +25,7 @@ char *create_buffer(char *file)
 }
 
 /**
- * close_file: closes file descriptors.
+ * close_file - closes file descriptors.
  * @fd: The file descriptor to be closed.
  */
 void close_file(int fd)
@@ -36,7 +36,7 @@ void close_file(int fd)
 
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, 
+		dprintf(STDERR_FILENO,
 			"Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
