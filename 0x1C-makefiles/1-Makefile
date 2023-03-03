@@ -1,0 +1,7 @@
+# The compiler school uses
+CC = gcc
+# The .c files
+SRC = school.c main.c
+# The all rule builds the executable
+all:
+	${CC} ${SRC} -o school
