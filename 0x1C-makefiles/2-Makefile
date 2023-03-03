@@ -1,0 +1,11 @@
+# The compiler school uses
+CC = gcc
+# The .c files
+SRC = school.c main.c
+# The .o files
+OBJ = ${SRC:.c=.o}
+# The name of the executable
+NAME = school
+# The all rule builds the executable
+all: 	${OBJ}
+	${CC} ${OBJ} -o ${NAME}
