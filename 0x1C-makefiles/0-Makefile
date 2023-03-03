@@ -1,0 +1,4 @@
+# The all rule builds the executable
+# This is a simple Makefile with no variables
+all:
+	gcc school.c main.c -o school
