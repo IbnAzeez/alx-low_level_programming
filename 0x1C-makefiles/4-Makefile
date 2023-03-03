@@ -1,0 +1,27 @@
+# The compiler school uses
+CC = gcc
+# The .c files
+SRC = school.c main.c
+# The .o files
+OBJ = ${SRC:.c=.o}
+# The name of the executable
+NAME = school
+# The program to delete files
+RM = rm -f
+# School's favorite compiler flags
+CFLAGS = -Wall -Werror -Wextra -pedantic
+# The all rule builds the executable
+all: 	${OBJ}
+	${CC} ${CFLAGS} ${OBJ} -o ${NAME}
+# The clean rule deletes all Emacs temporary files along with the executable
+clean:
+	${RM} *~ ${NAME}
+# The oclean rule deletes .o files
+oclean:
+	${RM} ${OBJ}
+# The fclean rule deletes Emacs temporary files, the executable, and .o files
+fclean:
+	${RM} *~ ${NAME} ${OBJ}
+# The re rule forces recompilation of all source files
+re:	oclean ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
